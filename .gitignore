@@ -1,0 +1,5 @@
+*.json
+.venv
+.idea
+quickstart.py
+lenglogs.txt
