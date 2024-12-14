@@ -1,7 +1,7 @@
 from aiogram import F, Router, types
 from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import StatesGroup, State
-from aiogram.types import Message, CallbackQuery
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
 from util import push_to_json, take_from_json, StateGuard
@@ -73,8 +73,8 @@ async def get_price(message: Message, state: FSMContext):
 
 
 # if user sad that everything good on changing
-@router.callback_query(F.data == 'approved')
-async def approving(callback: CallbackQuery, state: FSMContext):
+@router.callback_query(F.data == 'approved changes')
+async def approving_changes(callback: CallbackQuery, state: FSMContext):
     message_data = await state.get_data()
     await state.clear()
     config_json = take_from_json("config.json")
@@ -86,9 +86,9 @@ async def approving(callback: CallbackQuery, state: FSMContext):
 
 
 # if something went wrong on increasing or decreasing balance
-@router.callback_query(F.data == 'wrong')
-async def wrong(callback: CallbackQuery, state: FSMContext):
+@router.callback_query(F.data == 'wrong changes')
+async def wrong_changes(callback: CallbackQuery, state: FSMContext):
     await state.clear()
     await callback.message.delete()
-    await callback.message.answer(text='Начать заного - Пополнить или Вычесть',
+    await callback.message.answer(text='Начать заново - Пополнить или Вычесть',
                                   reply_markup=keyboards.main_keyboard)

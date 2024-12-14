@@ -1,5 +1,5 @@
 from aiogram import F, Router
-from aiogram.filters import CommandStart, Command
+from aiogram.filters import Command
 from aiogram.types import Message
 
 import keyboard as keyboards
@@ -16,12 +16,12 @@ async def get_help(message: Message):
         await message.answer("Нет доступа")
         return
     await message.answer("""Команды:
-    Добавить - Оплата ученика;
-    Вычесть - Вычесть сумму вручную
+    Пополнить баланс - Оплата ученика;
+    Вычесть баланс - Вычесть сумму вручную
     Добавить ученика - добавить нового ученика
     Удалить ученика - Удалить ученика
-    Проверить баланс - проверить баланс
-    Пересчитать - пересчитать с учетом новых занятий""",
+    Проверить балансы - проверить баланс
+    Пересчитать балансы - пересчитать с учетом новых занятий""",
                          reply_markup=keyboards.main_keyboard)
 
 
@@ -41,7 +41,7 @@ async def recount(message: Message):
 
 
 # balance check (without any recounting from calendar)
-@router.message(F.text == 'Проверить баланс')
+@router.message(F.text == 'Проверить балансы')
 async def balance(message: Message):
     config_json = take_from_json("config.json")
     if message.from_user.username not in config_json["users"]:
