@@ -89,8 +89,13 @@ def processing_event(event):
     description_list = list(description.split())
 
     if ("урок" in summary_list) or ("Урок" in summary_list):
-        money_count = description_list[0]
-        name = summary_list[0]
+        people = [(summary_list[0], description_list[0])]
+    elif ("Группа" in summary_list) or ("группа" in summary_list):
+        people = [(description_list[i], description_list[i+1]) for i in range(0, len(description_list) - 1, 2)]
+    else:
+        return ''
+
+    for name, money_count in people:
         if not money_count.isnumeric():
             logging.error(error_text)
             return error_text
@@ -98,15 +103,7 @@ def processing_event(event):
         if name not in money_json:
             money_json[name] = 0
         money_json[name] -= money_count
-    elif ("Группа" in summary_list) or ("группа" in summary_list):
-        for i in range(0, len(description_list) - 1, 2):
-            if not description_list[i + 1].isnumeric():
-                logging.error(error_text)
-                return error_text
-            if description_list[i] not in money_json:
-                money_json[description_list[i]] = -int(description_list[i + 1])
-            else:
-                money_json[description_list[i]] -= int(description_list[i + 1])
+
     push_to_json(config_json["money_count"], money_json)
     return ''
 

@@ -39,3 +39,22 @@ def take_balance(money):
         elif money[i] >= 0:
             message_text += f'Остаток {i} равен: {money[i]} руб\n'
     return message_text
+
+
+#
+class StateGuard:
+    def __init__(self, state):
+        self.state = state
+        self.is_locked = False
+
+    async def __aenter__(self):
+        self.is_locked = True
+        return self
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        if self.is_locked:
+            await self.state.clear()
+
+    def unlock(self):
+        self.is_locked = False
+
+
