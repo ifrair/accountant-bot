@@ -2,4 +2,4 @@
 .venv
 .idea
 quickstart.py
-lenglogs.txt
+*logs*.txt
