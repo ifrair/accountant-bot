@@ -50,11 +50,10 @@ class StateGuard:
     async def __aenter__(self):
         self.is_locked = True
         return self
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         if self.is_locked:
             await self.state.clear()
 
     def unlock(self):
         self.is_locked = False
-
-
