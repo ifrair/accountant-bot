@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from util import push_to_json, take_from_json, StateGuard
+from util import is_int, push_to_json, take_from_json, take_names, StateGuard
 
 
 class AddNewStudent(StatesGroup):
@@ -44,7 +44,7 @@ async def add_new_name(message: Message, state: FSMContext):
 # just puts this balance on student
 @router.message(AddNewStudent.price)
 async def add_new_price(message: Message, state: FSMContext):
-    if not message.text.isnumeric():
+    if not is_int(message.text):
         await message.answer('Неправильный ввод\nНачните заного - Добавить ученика',
                              reply_markup=keyboards.main_keyboard)
         await state.clear()
@@ -85,9 +85,7 @@ async def delete_student(message: Message, state: FSMContext):
         return
 
     await state.set_state(DeleteStudent.name)
-    message_text = 'Выбери и пришли одного:\n'
-    for i in money_counts:
-        message_text += f'`{i}`\n'
+    message_text = 'Выбери и пришли одного:\n' + take_names(money_counts)
     await message.answer(message_text,
                          parse_mode="MARKDOWN",
                          reply_markup=types.ReplyKeyboardRemove())
