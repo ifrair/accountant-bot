@@ -3,8 +3,8 @@ from aiogram.filters import Command
 from aiogram.types import Message
 
 import keyboard as keyboards
-from calendar_util import recount as money_recount
-from util import take_from_json, take_balance
+from calendar_util import recount as money_recount, get_datetime_string
+from util import take_from_json, push_to_json, take_balance
 
 router = Router()
 
@@ -32,12 +32,44 @@ async def recount(message: Message):
     if message.from_user.username not in config_json["users"]:
         await message.answer("Нет доступа")
         return
-    errors = money_recount()
-    money = take_from_json(config_json["money_count"])
-    message_text = take_balance(money)
-    await message.answer(message_text)
-    errors = f'Ошибки:\n{errors}' if errors != '' else "Ошибок не обнаружено"
-    await message.answer(errors, reply_markup=keyboards.main_keyboard)
+
+    money_counts = take_from_json(config_json["money_count"])
+    last_time = take_from_json(config_json["last_time"])
+    push_to_json(config_json["money_counts_backup"], money_counts)
+    push_to_json(config_json["last_time_backup"], last_time)
+
+    events_text, errors_text = money_recount()
+
+    events_text = f'Обработаны события:\n\n{events_text}' if events_text != '' else "Уроков не обнаружено"
+    await message.answer(events_text)
+
+    errors_text = f'Ошибки:\n\n{errors_text}' if errors_text != '' else "Ошибок не обнаружено"
+    await message.answer(errors_text)
+
+    money_counts = take_from_json(config_json["money_count"])
+    message_text = take_balance(money_counts)
+    await message.answer(message_text, reply_markup=keyboards.main_keyboard)
+
+
+# One time rolls back last recount
+@router.message(F.text == "Откатить последний пересчет")
+async def recount_roll_back(message: Message):
+    config_json = take_from_json("config.json")
+    if message.from_user.username not in config_json["users"]:
+        await message.answer("Нет доступа")
+        return
+    last_time = take_from_json(config_json["last_time"])
+    last_time_backup = take_from_json(config_json["last_time_backup"])
+    if last_time == last_time_backup:
+        await message.answer("Нечего откатывать")
+        return
+    money_counts_backup = take_from_json(config_json["money_counts_backup"])
+    push_to_json(config_json["last_time"], last_time_backup)
+    push_to_json(config_json["money_count"], money_counts_backup)
+    money_message = take_balance(money_counts_backup)
+    await message.answer(f"Откатили до {get_datetime_string(last_time_backup)}\n\n{money_message}",
+                         reply_markup=keyboards.main_keyboard)
+
 
 
 # balance check (without any recounting from calendar)

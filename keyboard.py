@@ -3,7 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMar
 main_keyboard = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text="Пересчитать балансы"), KeyboardButton(text='Проверить балансы')],
     [KeyboardButton(text="Пополнить баланс"), KeyboardButton(text='Вычесть баланс')],
-    [KeyboardButton(text='Добавить ученика'), KeyboardButton(text='Удалить ученика')]
+    [KeyboardButton(text='Добавить ученика'), KeyboardButton(text='Удалить ученика')],
+    [KeyboardButton(text='Откатить последний пересчет')]
 ],
     resize_keyboard=True
                             )
