@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from util import is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils import is_int, push_to_json, take_from_json, take_names, StateGuard
 
 
 class AddNewStudent(StatesGroup):
@@ -24,7 +24,7 @@ router = Router()
 # adds new student
 @router.message(F.text == 'Добавить ученика')
 async def add_new(message: Message, state: FSMContext):
-    config_json = take_from_json("config.json")
+    config_json = take_from_json("config")
     if message.from_user.username not in config_json["users"]:
         await message.answer("Нет доступа")
         return
@@ -62,10 +62,9 @@ async def approving_adding(callback: CallbackQuery, state: FSMContext):
     message_data = await state.get_data()
     await state.clear()
 
-    config_json = take_from_json("config.json")
-    money_counts = take_from_json(config_json["money_count"])
+    money_counts = take_from_json("money_count")
     money_counts[message_data["name"]] = message_data["price"]
-    push_to_json(config_json["money_count"], money_counts)
+    push_to_json("money_count", money_counts)
 
     await callback.message.delete()
     await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
@@ -74,12 +73,12 @@ async def approving_adding(callback: CallbackQuery, state: FSMContext):
 # delete student
 @router.message(F.text == 'Удалить ученика')
 async def delete_student(message: Message, state: FSMContext):
-    config_json = take_from_json("config.json")
+    config_json = take_from_json("config")
     if message.from_user.username not in config_json["users"]:
         await message.answer("Нет доступа")
         return
 
-    money_counts = take_from_json(config_json["money_count"])
+    money_counts = take_from_json("money_count")
     if money_counts == {}:
         await message.answer('Нет учеников', reply_markup=keyboards.main_keyboard)
         return
@@ -95,8 +94,7 @@ async def delete_student(message: Message, state: FSMContext):
 @router.message(DeleteStudent.name)
 async def delete_name(message: Message, state: FSMContext):
     async with StateGuard(state) as guard:
-        config_json = take_from_json("config.json")
-        money_counts = take_from_json(config_json["money_count"])
+        money_counts = take_from_json("money_count")
         if message.text not in money_counts:
             await message.answer('Нет такого\nНачните заного - Удалить ученика',
                                  reply_markup=keyboards.main_keyboard)
@@ -116,10 +114,9 @@ async def approving_deleting(callback: CallbackQuery, state: FSMContext):
     message_data = await state.get_data()
     await state.clear()
 
-    config_json = take_from_json("config.json")
-    money_counts = take_from_json(config_json["money_count"])
+    money_counts = take_from_json("money_count")
     money_counts.pop(message_data['name'])
-    push_to_json(config_json["money_count"], money_counts)
+    push_to_json("money_count", money_counts)
 
     await callback.message.delete()
     await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
