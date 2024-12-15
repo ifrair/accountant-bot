@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from util import is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils import is_int, push_to_json, take_from_json, take_names, StateGuard
 
 
 class ChangeBalance(StatesGroup):
@@ -20,11 +20,11 @@ router = Router()
 # manually increase someone's balance
 @router.message((F.text == "Пополнить баланс") | (F.text == "Вычесть баланс"))
 async def change_money(message: Message, state: FSMContext):
-    config_json = take_from_json("config.json")
+    config_json = take_from_json("config")
     if message.from_user.username not in config_json["users"]:
         await message.answer("Нет доступа")
         return
-    money_counts = take_from_json(config_json["money_count"])
+    money_counts = take_from_json("money_count")
     if money_counts == {}:
         await message.answer("Нет учеников")
         return
@@ -41,8 +41,7 @@ async def change_money(message: Message, state: FSMContext):
 @router.message(ChangeBalance.name)
 async def get_name(message: Message, state: FSMContext):
     async with StateGuard(state) as guard:
-        config_json = take_from_json("config.json")
-        money_counts = take_from_json(config_json["money_count"])
+        money_counts = take_from_json("money_count")
         if message.text not in money_counts:
             await message.answer('Нет такого',
                                  reply_markup=keyboards.main_keyboard)
@@ -74,12 +73,13 @@ async def get_price(message: Message, state: FSMContext):
 async def approving_changes(callback: CallbackQuery, state: FSMContext):
     message_data = await state.get_data()
     await state.clear()
-    config_json = take_from_json("config.json")
-    money_counts = take_from_json(config_json["money_count"])
+    
+    money_counts = take_from_json("money_count")
     money_counts[message_data["name"]] += int(message_data["price"]) * (1 if message_data['is_add'] else -1)
+    push_to_json("money_count", money_counts)
+
     await callback.message.delete()
     await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
-    push_to_json(config_json["money_count"], money_counts)
 
 
 # if something went wrong on increasing or decreasing balance
