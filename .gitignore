@@ -1,5 +1,4 @@
 *.json
 .venv
 .idea
-quickstart.py
-*logs*.txt
+data

@@ -5,8 +5,13 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from datetime import datetime
-from util import push_to_json, take_from_json
+from util import is_int, push_to_json, take_from_json
 
+
+def get_datetime_string(dt_json):
+    date_string = f"{dt_json['year']}.{dt_json['month']}.{dt_json['day']}"
+    time_string = f"{dt_json['hour']}:{dt_json['minute']}"
+    return date_string + ' ' + time_string
 
 # gets date of last interaction with recount function
 def get_last_date_time():
@@ -74,38 +79,42 @@ def get_service():
 # processes the event and return errors (if they exist)
 def processing_event(event):
     config_json = take_from_json("config.json")
-    money_json = take_from_json(config_json["money_count"])
+    money_counts = take_from_json(config_json["money_count"])
     event_start = event['start'].get('dateTime', event['start'].get('date'))
     summary = event.get('summary', 'Нет названия')
     description = event.get('description', 'Нет описания')
     if summary == "Нет названия":
-        return ''
+        return '', ''
 
     error_text = f"""НЕПРАВИЛЬНЫЙ ФОРМАТ ОПИСАНИЯ!
-      {summary};
-      Дата занятия: {event_start};
-      Описание - {description}"""
+    {summary};
+    Дата занятия: {event_start};
+    Описание - {description}\n"""
     summary_list = list(summary.split())
     description_list = list(description.split())
 
     if ("урок" in summary_list) or ("Урок" in summary_list):
-        people = [(summary_list[0], description_list[0])]
+        money = description_list[0]
+        people = [(summary_list[0], money)]
     elif ("Группа" in summary_list) or ("группа" in summary_list):
         people = [(description_list[i], description_list[i+1]) for i in range(0, len(description_list) - 1, 2)]
+
     else:
-        return ''
+        return '', ''
 
+    event_text = summary + ': '
     for name, money_count in people:
-        if not money_count.isnumeric():
+        if not is_int(money_count):
             logging.error(error_text)
-            return error_text
-        money_count = int(money_count)
-        if name not in money_json:
-            money_json[name] = 0
-        money_json[name] -= money_count
-
-    push_to_json(config_json["money_count"], money_json)
-    return ''
+            return '', error_text
+        money_count = abs(int(money_count))
+        if name not in money_counts:
+            money_counts[name] = 0
+        money_counts[name] -= money_count
+        event_text += f'{name}-{money_count}, '
+    event_text = event_text[:-2] + '\n'
+    push_to_json(config_json["money_count"], money_counts)
+    return event_text, ''
 
 
 def recount():
@@ -125,10 +134,12 @@ def recount():
         orderBy='startTime').execute()
 
     events = events_result.get('items', [])
-    errors = ''
+    events_text = ''
+    errors_text = ''
     if not events:
         logging.info('Нет предстоящих событий.\n\n')
     for event in events:
         processed = processing_event(event)
-        errors += processed
-    return errors
+        events_text += processed[0]
+        errors_text += processed[1]
+    return events_text, errors_text
