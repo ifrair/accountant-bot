@@ -5,6 +5,8 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
 from .json_utils import push_to_json, take_from_json
 from .utils import is_int
 
@@ -16,7 +18,7 @@ def get_datetime_string(dt_json):
 
 
 # gets date of last interaction with recount function
-def get_last_date_time():
+def get_last_date_time(timezone):
     date_of_last_recount = take_from_json("last_time")
     date = datetime(
         date_of_last_recount["year"],
@@ -24,20 +26,8 @@ def get_last_date_time():
         date_of_last_recount["day"],
         date_of_last_recount["hour"],
         date_of_last_recount["minute"],
-        date_of_last_recount["second"]).isoformat() + 'Z'
-    return date
-
-
-# gets date from datetime.now()
-def get_now_date():
-    date_now = datetime.now()
-    date = datetime(
-        date_now.year,
-        date_now.month,
-        date_now.day,
-        date_now.hour,
-        date_now.minute,
-        date_now.second).isoformat() + 'Z'
+        date_of_last_recount["second"],
+        tzinfo=ZoneInfo(timezone)).isoformat()
     return date
 
 
@@ -130,15 +120,17 @@ def recount_money():
     config_json = take_from_json("config")
     service = get_service()
 
-    date_now = datetime.now()
-    from_date = get_last_date_time()
-    to_date = get_now_date()
+    timezone = config_json['timezone']
+    date_now = datetime.now(ZoneInfo(timezone)).replace(microsecond=0)
+    from_date = get_last_date_time(timezone)
+    to_date = date_now.isoformat()
     last_date_update(date_now)
 
     events_result = service.events().list(
         calendarId=config_json["calendar_id"],
         timeMin=from_date,
         timeMax=to_date,
+        timeZone=timezone,
         singleEvents=True,
         orderBy='startTime').execute()
 
