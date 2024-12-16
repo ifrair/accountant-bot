@@ -27,7 +27,7 @@ async def recount(message: Message):
 
     money_text = (f'Всего заработано: {money_sum} руб\n'
                   f'Отработано: {hours_sum} часов\n'
-                  f'В среднем: {money_sum // hours_sum} руб/ч')
+                  f'В среднем: {int(money_sum / hours_sum)} руб/ч')
     await message.answer(money_text)
 
     errors_text = f'Ошибки:\n\n{errors_text}' if errors_text != '' else "Ошибок не обнаружено"
