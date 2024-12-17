@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from utils import is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
 
 
 class ChangeBalance(StatesGroup):
@@ -19,11 +19,8 @@ router = Router()
 
 # manually increase someone's balance
 @router.message((F.text == "Пополнить баланс") | (F.text == "Вычесть баланс"))
+@check_access
 async def change_money(message: Message, state: FSMContext):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
     money_counts = take_from_json("money_count")
     if money_counts == {}:
         await message.answer("Нет учеников")
