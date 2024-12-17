@@ -44,7 +44,7 @@ def last_date_update(date_now):
 
 
 # gets services of Google calendar
-def get_service():
+def connect_to_calendar():
     url = ['https://www.googleapis.com/auth/calendar.readonly']
 
     config_json = take_from_json("config")
@@ -116,10 +116,12 @@ def processing_event(event):
     return event_text, '', money_sum, hours_sum
 
 
+# recounting from last time
 def recount_money():
     config_json = take_from_json("config")
-    service = get_service()
+    service = connect_to_calendar()
 
+    # recounts time moments to request
     timezone = config_json['timezone']
     date_now = datetime.now(ZoneInfo(timezone)).replace(microsecond=0)
     from_date = get_last_date_time(timezone)

@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from utils import is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
 
 
 class AddNewStudent(StatesGroup):
@@ -23,11 +23,8 @@ router = Router()
 
 # adds new student
 @router.message(F.text == 'Добавить ученика')
+@check_access
 async def add_new(message: Message, state: FSMContext):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
     await state.set_state(AddNewStudent.name)
     await message.answer('Введите имя ученика:',
                          reply_markup=types.ReplyKeyboardRemove())
@@ -72,12 +69,8 @@ async def approving_adding(callback: CallbackQuery, state: FSMContext):
 
 # delete student
 @router.message(F.text == 'Удалить ученика')
+@check_access
 async def delete_student(message: Message, state: FSMContext):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
-
     money_counts = take_from_json("money_count")
     if money_counts == {}:
         await message.answer('Нет учеников', reply_markup=keyboards.main_keyboard)

@@ -2,19 +2,15 @@ from aiogram import F, Router
 from aiogram.types import Message
 
 import keyboard as keyboards
-from utils import take_from_json, push_to_json, take_balances, recount_money, get_datetime_string
+from utils import check_access, take_from_json, push_to_json, take_balances, recount_money, get_datetime_string
 
 router = Router()
 
 
 # adds all new lessons to balance
 @router.message(F.text == "Пересчитать балансы")
+@check_access
 async def recount(message: Message):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
-
     money_counts = take_from_json("money_count")
     last_time = take_from_json("last_time")
     push_to_json("money_counts_backup", money_counts)
@@ -40,11 +36,8 @@ async def recount(message: Message):
 
 # One time rolls back last recount
 @router.message(F.text == "Откатить последний пересчет")
+@check_access
 async def recount_roll_back(message: Message):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
     last_time = take_from_json("last_time")
     last_time_backup = take_from_json("last_time_backup")
     if last_time == last_time_backup:
@@ -56,17 +49,3 @@ async def recount_roll_back(message: Message):
     money_message = take_balances(money_counts_backup)
     await message.answer(f"Откатили до {get_datetime_string(last_time_backup)}\n\n{money_message}",
                          reply_markup=keyboards.main_keyboard)
-
-
-# balance check (without any recounting from calendar)
-@router.message(F.text == 'Проверить балансы')
-async def get_balance(message: Message):
-    config_json = take_from_json("config")
-    if message.from_user.username not in config_json["users"]:
-        await message.answer("Нет доступа")
-        return
-    money_counts = take_from_json("money_count")
-    message_text = take_balances(money_counts)
-    if message_text == '':
-        message_text = "Ничего нет"
-    await message.answer(message_text, reply_markup=keyboards.main_keyboard)
