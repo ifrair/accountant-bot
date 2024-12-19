@@ -18,15 +18,14 @@ def get_datetime_string(dt_json):
 
 
 # gets date of last interaction with recount function
-def get_last_date_time(timezone):
-    date_of_last_recount = take_from_json("last_time")
+def get_datetime_from_json(timezone, date_json):
     date = datetime(
-        date_of_last_recount["year"],
-        date_of_last_recount["month"],
-        date_of_last_recount["day"],
-        date_of_last_recount["hour"],
-        date_of_last_recount["minute"],
-        date_of_last_recount["second"],
+        date_json["year"],
+        date_json["month"],
+        date_json["day"],
+        date_json["hour"],
+        date_json["minute"],
+        date_json["second"],
         tzinfo=ZoneInfo(timezone)).isoformat()
     return date
 
@@ -67,7 +66,7 @@ def connect_to_calendar():
 
 
 # processes the event and return errors (if they exist)
-def processing_event(event):
+def processing_event(event, need_push_json=True):
     money_counts = take_from_json("money_count")
     event_start = event['start'].get('dateTime', event['start'].get('date'))
     summary = event.get('summary', 'Нет названия')
@@ -86,7 +85,6 @@ def processing_event(event):
         people = [(summary_list[0], description_list[0])]
     elif ("Группа" in summary_list) or ("группа" in summary_list):
         people = [(description_list[i], description_list[i+1]) for i in range(0, len(description_list) - 1, 2)]
-
     else:
         return '', '', 0, 0
 
@@ -107,38 +105,49 @@ def processing_event(event):
         event_text += f'{name}-{money_count}, '
 
     event_text = event_text[:-2] + '\n'
-    push_to_json("money_count", money_counts)
+    if need_push_json:
+        push_to_json("money_count", money_counts)
 
     event_end = event['end'].get('dateTime', event['end'].get('date'))
     start_dt = datetime.fromisoformat(event_start)
     end_dt = datetime.fromisoformat(event_end)
     hours_sum = (end_dt - start_dt).total_seconds() / 60 / 60
+
     return event_text, '', money_sum, hours_sum
+
+
+def get_from_to_now_datetime(from_time_json):
+    config_json = take_from_json("config")
+    timezone = config_json['timezone']
+    date_now = datetime.now(ZoneInfo(timezone)).replace(microsecond=0)
+    from_date = get_datetime_from_json(timezone, from_time_json)
+    to_date = date_now.isoformat()
+    return from_date, to_date, date_now
+
+
+def get_events_by_time(service, from_time, to_time):
+    config_json = take_from_json("config")
+    events_result = service.events().list(
+        calendarId=config_json["calendar_id"],
+        timeMin=from_time,
+        timeMax=to_time,
+        timeZone=config_json['timezone'],
+        singleEvents=True,
+        orderBy='startTime').execute()
+    return events_result.get('items', [])
 
 
 # recounting from last time
 def recount_money():
-    config_json = take_from_json("config")
-    service = connect_to_calendar()
-
     # recounts time moments to request
-    timezone = config_json['timezone']
-    date_now = datetime.now(ZoneInfo(timezone)).replace(microsecond=0)
-    from_date = get_last_date_time(timezone)
-    to_date = date_now.isoformat()
-    last_date_update(date_now)
+    from_date, to_date, date_now = get_from_to_now_datetime(take_from_json("last_time"))
 
-    events_result = service.events().list(
-        calendarId=config_json["calendar_id"],
-        timeMin=from_date,
-        timeMax=to_date,
-        timeZone=timezone,
-        singleEvents=True,
-        orderBy='startTime').execute()
-
-    events = events_result.get('items', [])
+    service = connect_to_calendar()
+    events = get_events_by_time(service, from_date, to_date)
     if not events:
         logging.info('Нет предстоящих событий.\n\n')
+    last_date_update(date_now)
+
     events_text = ''
     errors_text = ''
     money_sum = 0
