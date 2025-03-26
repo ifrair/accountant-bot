@@ -124,14 +124,28 @@ def get_from_to_now_datetime(from_time_json):
 
 def get_events_by_time(service, from_time, to_time):
     config_json = take_from_json("config")
-    events_result = service.events().list(
-        calendarId=config_json["calendar_id"],
-        timeMin=from_time,
-        timeMax=to_time,
-        timeZone=config_json['timezone'],
-        singleEvents=True,
-        orderBy='startTime').execute()
-    return events_result.get('items', [])
+    events = []
+    page_token = None
+
+    while True:
+        events_result = service.events().list(
+            calendarId=config_json["calendar_id"],
+            timeMin=from_time,
+            timeMax=to_time,
+            timeZone=config_json['timezone'],
+            singleEvents=True,
+            orderBy='startTime',
+            maxResults=2500,
+            pageToken=page_token
+        ).execute()
+
+        events.extend(events_result.get('items', []))
+        page_token = events_result.get('nextPageToken')
+
+        if not page_token:
+            break
+
+    return events
 
 
 # recounting from last time

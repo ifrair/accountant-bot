@@ -27,6 +27,6 @@
   last_time - дата последнего обновления в формате как start_time можно указать любую начальную дату<br>
   money_counts_backup и last_time_backup - бэкапы, можно скопировать с предыдущих двух<br>
   credentials - этот .json нужно взять на сайте API google calendar
-* Подключить библиотеки: google-auth, google-auth-oauthlib, google-auth-httplib2, google-api-python-client, aiogram
+* Подключить библиотеки: google-auth, google-auth-oauthlib, google-auth-httplib2, google-api-python-client, aiogram, tzdata
 * При первом запуске понадбится залогиниться в Гугле в браузере
   
