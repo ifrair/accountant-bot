@@ -12,8 +12,8 @@ from .utils import is_int
 
 
 def get_datetime_string(dt_json):
-    date_string = f"{dt_json['year']}.{dt_json['month']}.{dt_json['day']}"
-    time_string = f"{dt_json['hour']}:{dt_json['minute']}"
+    date_string = f"{str(dt_json['year']).zfill(4)}.{str(dt_json['month']).zfill(2)}.{str(dt_json['day']).zfill(2)}"
+    time_string = f"{str(dt_json['hour']).zfill(2)}:{str(dt_json['minute']).zfill(2)}"
     return date_string + ' ' + time_string
 
 
@@ -52,13 +52,10 @@ def connect_to_calendar():
         creds = Credentials.from_authorized_user_file(
             config_json["google_token"], url)
     if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(GoogleRequest())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                config_json["credentials"], url)
-            creds = flow.run_local_server(
-                port=0, access_type='offline', prompt='consent')
+        flow = InstalledAppFlow.from_client_secrets_file(
+            config_json["credentials"], url)
+        creds = flow.run_local_server(
+            port=0, access_type='offline', prompt='consent')
         creds_to_json = creds.to_json()
         push_to_json("google_token", creds_to_json, True)
     service = build('calendar', 'v3', credentials=creds)
