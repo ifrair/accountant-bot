@@ -6,14 +6,15 @@ from os.path import exists
 # function that pushes file to json
 def push_to_json(json_name, file_to_push, is_token=False):
     json_name = take_correct_json_name(json_name)
-    if not exists(json_name):
-        logging.error(f'Файла с названием: ({json_name}) не существует')
-        raise FileNotFoundError(f'НЕВЕРНОЕ НАИМЕНОВАНИЕ ФАЙЛА: {json_name}')
 
     if is_token:
         with open(json_name, "w") as token:
             token.write(file_to_push)
         return
+
+    if not exists(json_name):
+        logging.error(f'Файла с названием: ({json_name}) не существует')
+        raise FileNotFoundError(f'НЕВЕРНОЕ НАИМЕНОВАНИЕ ФАЙЛА: {json_name}')
 
     with open(json_name, "w") as json_file:
         json.dump(file_to_push, json_file)
