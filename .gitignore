@@ -2,3 +2,5 @@
 .idea
 *pycache*
 run.sh
+data
+*.json
