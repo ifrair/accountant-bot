@@ -1,6 +1,4 @@
-*.json
 .venv
 .idea
-data
 *pycache*
 run.sh
