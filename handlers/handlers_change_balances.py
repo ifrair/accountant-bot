@@ -29,9 +29,10 @@ async def change_money(message: Message, state: FSMContext):
     await state.update_data(is_add=(message.text == "Пополнить баланс"))
     await state.set_state(ChangeBalance.name)
     message_text = 'Выбери одного:\n' + take_names(money_counts) + '\nВыбери и пришли одного из этих учеников'
-    await message.answer(message_text,
+    sent_message = await message.answer(message_text,
                          parse_mode="MARKDOWN",
                          reply_markup=types.ReplyKeyboardRemove())
+    await state.update_data(list_message_id=sent_message.message_id)
 
 
 # takes name of student
@@ -48,6 +49,12 @@ async def get_name(message: Message, state: FSMContext):
     await state.set_state(ChangeBalance.price)
     message_data = await state.get_data()
     await message.answer('Теперь пришли сколько ' + ('оплачено' if message_data['is_add'] else 'вычесть'))
+    list_message_id = message_data.get('list_message_id')
+    if list_message_id:
+        await message.bot.delete_message(
+            chat_id=message.chat.id,
+            message_id=list_message_id
+        )
 
 
 # takes how much to increase

@@ -78,9 +78,10 @@ async def delete_student(message: Message, state: FSMContext):
 
     await state.set_state(DeleteStudent.name)
     message_text = 'Выбери и пришли одного:\n' + take_names(money_counts)
-    await message.answer(message_text,
+    sent_message = await message.answer(message_text,
                          parse_mode="MARKDOWN",
                          reply_markup=types.ReplyKeyboardRemove())
+    await state.update_data(list_message_id1=sent_message.message_id)
 
 
 # takes name of student to delete
@@ -99,7 +100,13 @@ async def delete_name(message: Message, state: FSMContext):
     await state.set_state(DeleteStudent.approving)
     await message.answer(f'Удалить {message.text}?',
                          reply_markup=keyboards.delete_student)
-
+    message_data = await state.get_data()
+    list_message_id = message_data.get('list_message_id1')
+    if list_message_id:
+        await message.bot.delete_message(
+            chat_id=message.chat.id,
+            message_id=list_message_id
+        )
 
 # if user sad that everything good on deleting
 @router.callback_query(F.data == 'approved deleting')
