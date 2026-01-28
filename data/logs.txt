@@ -1,0 +1,574 @@
+2026-01-27 14:31:42,592 INFO Start polling
+2026-01-27 14:31:43,388 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 14:51:30,430 INFO Update id=221629777 is handled. Duration 776 ms by bot id=8573861065
+2026-01-27 14:51:36,648 INFO Update id=221629778 is handled. Duration 111 ms by bot id=8573861065
+2026-01-27 14:51:40,584 INFO Update id=221629779 is handled. Duration 118 ms by bot id=8573861065
+2026-01-27 14:51:43,212 INFO Update id=221629780 is handled. Duration 240 ms by bot id=8573861065
+2026-01-27 14:51:47,027 INFO Update id=221629781 is handled. Duration 129 ms by bot id=8573861065
+2026-01-27 14:51:55,497 INFO Update id=221629782 is handled. Duration 138 ms by bot id=8573861065
+2026-01-27 14:51:59,823 INFO Update id=221629783 is handled. Duration 117 ms by bot id=8573861065
+2026-01-27 14:52:02,995 INFO Update id=221629784 is handled. Duration 433 ms by bot id=8573861065
+2026-01-27 14:52:04,901 INFO Update id=221629785 is handled. Duration 293 ms by bot id=8573861065
+2026-01-27 14:53:25,040 INFO Polling stopped
+2026-01-27 14:53:25,041 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 14:53:25,041 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 14:53:25,297 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:12:41,226 INFO Start polling
+2026-01-27 15:12:41,971 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:12:50,354 INFO Update id=221629786 is handled. Duration 943 ms by bot id=8573861065
+2026-01-27 15:15:11,932 INFO Update id=221629787 is handled. Duration 118 ms by bot id=8573861065
+2026-01-27 15:15:19,557 INFO Update id=221629788 is handled. Duration 313 ms by bot id=8573861065
+2026-01-27 15:15:25,182 INFO Update id=221629789 is handled. Duration 119 ms by bot id=8573861065
+2026-01-27 15:15:29,182 INFO Update id=221629790 is handled. Duration 631 ms by bot id=8573861065
+2026-01-27 15:15:45,263 INFO Update id=221629791 is handled. Duration 197 ms by bot id=8573861065
+2026-01-27 15:15:50,909 INFO Update id=221629792 is handled. Duration 221 ms by bot id=8573861065
+2026-01-27 15:15:56,971 INFO Update id=221629793 is handled. Duration 149 ms by bot id=8573861065
+2026-01-27 15:15:59,752 INFO Update id=221629794 is handled. Duration 235 ms by bot id=8573861065
+2026-01-27 15:16:16,542 INFO Polling stopped
+2026-01-27 15:16:16,543 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:16:16,543 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:16:16,796 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:22:17,183 INFO Start polling
+2026-01-27 15:22:17,928 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:22:24,977 INFO Update id=221629795 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-27 15:22:24,977 ERROR Cause exception while process update id=221629795 by bot id=8573861065
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\report_util.py", line 97, in show_students_list
+    keyboard = InlineKeyboardMarkup(row_width=2)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-01-27 15:22:41,860 INFO Polling stopped
+2026-01-27 15:22:41,861 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:22:41,861 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:22:42,126 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:24:51,601 INFO Start polling
+2026-01-27 15:24:52,334 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:24:53,392 INFO Update id=221629796 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-27 15:24:53,392 ERROR Cause exception while process update id=221629796 by bot id=8573861065
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                                        ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\report_util.py", line 97, in show_students_list
+    keyboard = InlineKeyboardMarkup(row_width=2)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\pydantic\main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-01-27 15:24:59,021 INFO Polling stopped
+2026-01-27 15:24:59,022 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:24:59,022 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:24:59,276 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:29:53,923 INFO Start polling
+2026-01-27 15:29:54,714 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:29:58,321 INFO Update id=221629797 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-27 15:29:58,322 ERROR Cause exception while process update id=221629797 by bot id=8573861065
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+2026-01-27 15:30:06,455 INFO Polling stopped
+2026-01-27 15:30:06,456 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:30:06,456 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:30:06,721 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:30:36,729 INFO Start polling
+2026-01-27 15:30:37,486 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:31:10,115 INFO Update id=221629798 is not handled. Duration 3 ms by bot id=8573861065
+2026-01-27 15:31:10,115 ERROR Cause exception while process update id=221629798 by bot id=8573861065
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+2026-01-27 15:31:31,861 INFO Update id=221629799 is handled. Duration 962 ms by bot id=8573861065
+2026-01-27 15:31:41,958 INFO Update id=221629800 is not handled. Duration 3 ms by bot id=8573861065
+2026-01-27 15:31:41,958 ERROR Cause exception while process update id=221629800 by bot id=8573861065
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+2026-01-27 15:31:45,976 INFO Update id=221629801 is handled. Duration 118 ms by bot id=8573861065
+2026-01-27 15:33:51,406 INFO Update id=221629802 is handled. Duration 171 ms by bot id=8573861065
+2026-01-27 15:33:58,993 INFO Update id=221629803 is not handled. Duration 2 ms by bot id=8573861065
+2026-01-27 15:33:58,993 ERROR Cause exception while process update id=221629803 by bot id=8573861065
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+2026-01-27 15:34:02,894 INFO Update id=221629804 is not handled. Duration 2 ms by bot id=8573861065
+2026-01-27 15:34:02,894 ERROR Cause exception while process update id=221629804 by bot id=8573861065
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_change_balances.py", line 32, in change_money
+    message_text = 'Выбери одного:\n' + show_students_list(money_counts) + '\nВыбери и пришли одного из этих учеников'
+                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
+2026-01-27 15:34:07,046 INFO Update id=221629805 is handled. Duration 160 ms by bot id=8573861065
+2026-01-27 15:34:10,566 INFO Update id=221629806 is handled. Duration 214 ms by bot id=8573861065
+2026-01-27 15:34:19,690 INFO Update id=221629807 is handled. Duration 148 ms by bot id=8573861065
+2026-01-27 15:34:23,324 INFO Update id=221629808 is handled. Duration 115 ms by bot id=8573861065
+2026-01-27 15:34:26,396 INFO Update id=221629809 is handled. Duration 236 ms by bot id=8573861065
+2026-01-27 15:34:31,055 INFO Polling stopped
+2026-01-27 15:34:31,057 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:34:31,057 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:34:31,314 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:45:17,121 INFO Start polling
+2026-01-27 15:45:17,887 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-27 15:45:26,365 INFO Update id=221629810 is handled. Duration 958 ms by bot id=8573861065
+2026-01-27 15:45:31,423 INFO Update id=221629811 is handled. Duration 164 ms by bot id=8573861065
+2026-01-27 15:46:12,764 INFO Update id=221629812 is handled. Duration 202 ms by bot id=8573861065
+2026-01-27 15:46:18,493 INFO Update id=221629813 is handled. Duration 148 ms by bot id=8573861065
+2026-01-27 15:46:29,217 INFO Update id=221629814 is handled. Duration 131 ms by bot id=8573861065
+2026-01-27 15:46:31,936 INFO Update id=221629815 is handled. Duration 111 ms by bot id=8573861065
+2026-01-27 15:46:44,224 INFO Update id=221629816 is handled. Duration 111 ms by bot id=8573861065
+2026-01-27 15:46:47,909 INFO Update id=221629817 is handled. Duration 131 ms by bot id=8573861065
+2026-01-27 15:47:01,337 INFO Update id=221629818 is handled. Duration 423 ms by bot id=8573861065
+2026-01-27 15:47:06,300 INFO Update id=221629819 is handled. Duration 212 ms by bot id=8573861065
+2026-01-27 15:48:13,445 INFO Polling stopped
+2026-01-27 15:48:13,445 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-27 15:48:13,445 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-27 15:48:13,710 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
