@@ -1,0 +1,14 @@
+{
+    "Token": "ВАШ ТЕЛЕГРАМ ТОКЕН",
+    "users": ["ТГ НИКИ ТЕХ КТО БУДЕТ ИМЕТЬ ДОСТУП (БЕЗ @)"],
+    "calendar_id": "primary ЛИБО ЕСЛИ БРАТЬ СОБЫТИЯ НЕ ИЗ ГЛАВНОГО КАЛЕНДАРЯ ТО ЕГО ID",
+    "timezone": "Europe/Moscow",
+    "money_count": "data/balances.json",
+    "last_time": "data/last_time.json",
+    "last_time_backup": "data/last_time_backup.json",
+    "credentials": "data/credentials.json",
+    "google_token": "data/token.json",
+    "money_counts_backup": "data/balances_backup.json",
+    "logs": "data/logs.txt",
+    "start_time": {"year": 2024, "month": 12, "day": 1, "hour": 0, "minute": 0, "second": 0}
+  }
