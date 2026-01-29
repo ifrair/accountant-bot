@@ -1,6 +1,7 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import OrderedDict
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from .calendar_utils import connect_to_calendar, get_from_to_now_datetime, get_events_by_time, processing_event
 from .utils import take_from_json
 
@@ -91,3 +92,14 @@ def take_names(money):
     for name in sorted(money):
         message_text += f'`{name}`\n'
     return message_text
+
+def show_students_list(students):
+    keyboard = []
+
+    for student in students:
+        button = InlineKeyboardButton(text=student, callback_data=student)
+        keyboard.append([button])
+    keyboard.append([InlineKeyboardButton(text=f"Отмена", callback_data="cancel_operation")])
+
+    reply_markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
+    return reply_markup
