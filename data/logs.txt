@@ -572,3 +572,512 @@ TypeError: can only concatenate str (not "InlineKeyboardMarkup") to str
 2026-01-27 15:48:13,445 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
 2026-01-27 15:48:13,445 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
 2026-01-27 15:48:13,710 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-28 20:31:23,458 INFO Start polling
+2026-01-28 20:31:24,230 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-28 20:32:17,866 INFO Update id=221629821 is handled. Duration 1069 ms by bot id=8573861065
+2026-01-28 20:32:23,870 INFO Update id=221629822 is handled. Duration 124 ms by bot id=8573861065
+2026-01-28 20:32:26,577 INFO Update id=221629823 is handled. Duration 115 ms by bot id=8573861065
+2026-01-28 20:32:33,629 INFO Update id=221629824 is handled. Duration 125 ms by bot id=8573861065
+2026-01-28 20:32:38,792 INFO Update id=221629825 is handled. Duration 202 ms by bot id=8573861065
+2026-01-28 20:32:41,335 INFO Update id=221629826 is handled. Duration 211 ms by bot id=8573861065
+2026-01-28 20:32:45,237 INFO Update id=221629827 is handled. Duration 120 ms by bot id=8573861065
+2026-01-28 20:32:46,928 INFO Update id=221629828 is not handled. Duration 0 ms by bot id=8573861065
+2026-01-28 20:32:51,899 INFO Update id=221629829 is handled. Duration 129 ms by bot id=8573861065
+2026-01-28 20:32:54,667 INFO Update id=221629830 is handled. Duration 109 ms by bot id=8573861065
+2026-01-28 20:32:56,428 INFO Update id=221629831 is handled. Duration 133 ms by bot id=8573861065
+2026-01-28 20:33:02,251 INFO Update id=221629832 is handled. Duration 257 ms by bot id=8573861065
+2026-01-28 20:36:22,199 INFO Polling stopped
+2026-01-28 20:36:22,199 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-28 20:36:22,200 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-28 20:36:22,458 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 18:15:10,014 INFO Start polling
+2026-01-29 18:15:10,782 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 18:16:27,243 INFO Update id=221629833 is handled. Duration 1125 ms by bot id=8573861065
+2026-01-29 18:16:37,681 INFO Polling stopped
+2026-01-29 18:16:37,682 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 18:16:37,682 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 18:16:37,941 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:47:22,939 INFO Start polling
+2026-01-29 20:47:23,686 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:47:50,127 INFO Update id=221629834 is handled. Duration 1038 ms by bot id=8573861065
+2026-01-29 20:47:53,239 INFO Update id=221629835 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:47:56,153 INFO Update id=221629836 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:47:57,472 INFO Update id=221629837 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:47:58,107 INFO Update id=221629838 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:47:59,343 INFO Update id=221629839 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:48:07,949 INFO Update id=221629840 is handled. Duration 125 ms by bot id=8573861065
+2026-01-29 20:48:15,266 INFO Update id=221629841 is handled. Duration 126 ms by bot id=8573861065
+2026-01-29 20:48:19,980 INFO Update id=221629842 is handled. Duration 140 ms by bot id=8573861065
+2026-01-29 20:48:23,586 INFO Update id=221629843 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:48:23,830 INFO Update id=221629844 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:48:24,473 INFO Update id=221629845 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:48:25,017 INFO Update id=221629846 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:48:29,764 INFO Update id=221629847 is handled. Duration 131 ms by bot id=8573861065
+2026-01-29 20:48:34,434 INFO Update id=221629848 is handled. Duration 299 ms by bot id=8573861065
+2026-01-29 20:48:36,142 INFO Update id=221629849 is handled. Duration 137 ms by bot id=8573861065
+2026-01-29 20:48:40,932 INFO Update id=221629850 is handled. Duration 146 ms by bot id=8573861065
+2026-01-29 20:49:01,302 INFO Polling stopped
+2026-01-29 20:49:01,304 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 20:49:01,304 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 20:49:01,559 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:49:59,766 INFO Start polling
+2026-01-29 20:50:00,541 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:50:01,332 INFO Update id=221629851 is handled. Duration 692 ms by bot id=8573861065
+2026-01-29 20:50:01,586 INFO Update id=221629854 is handled. Duration 113 ms by bot id=8573861065
+2026-01-29 20:50:01,615 INFO Update id=221629852 is handled. Duration 975 ms by bot id=8573861065
+2026-01-29 20:50:04,882 INFO Update id=221629855 is handled. Duration 122 ms by bot id=8573861065
+2026-01-29 20:50:05,039 INFO Update id=221629853 is handled. Duration 4398 ms by bot id=8573861065
+2026-01-29 20:50:08,758 INFO Update id=221629856 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:11,789 INFO Update id=221629857 is handled. Duration 221 ms by bot id=8573861065
+2026-01-29 20:50:14,521 INFO Update id=221629858 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:15,346 INFO Update id=221629859 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:15,939 INFO Update id=221629860 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:16,672 INFO Update id=221629861 is not handled. Duration 2 ms by bot id=8573861065
+2026-01-29 20:50:17,040 INFO Update id=221629862 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:20,930 INFO Update id=221629863 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:50:26,915 INFO Polling stopped
+2026-01-29 20:50:26,917 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 20:50:26,917 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 20:50:27,175 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:51:04,583 INFO Start polling
+2026-01-29 20:51:05,340 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:51:09,328 INFO Update id=221629864 is handled. Duration 1710 ms by bot id=8573861065
+2026-01-29 20:51:15,745 INFO Update id=221629865 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:51:17,551 INFO Update id=221629866 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:51:18,650 INFO Update id=221629867 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 20:51:21,511 INFO Polling stopped
+2026-01-29 20:51:21,512 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 20:51:21,512 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 20:51:21,765 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:58:23,738 INFO Start polling
+2026-01-29 20:58:24,493 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 20:58:30,548 INFO Update id=221629868 is handled. Duration 1478 ms by bot id=8573861065
+2026-01-29 20:58:33,376 INFO Update id=221629869 is handled. Duration 113 ms by bot id=8573861065
+2026-01-29 20:58:37,872 INFO Update id=221629870 is handled. Duration 195 ms by bot id=8573861065
+2026-01-29 20:58:41,493 INFO Update id=221629871 is handled. Duration 216 ms by bot id=8573861065
+2026-01-29 20:58:52,321 INFO Update id=221629872 is handled. Duration 115 ms by bot id=8573861065
+2026-01-29 20:59:10,126 INFO Polling stopped
+2026-01-29 20:59:10,127 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 20:59:10,127 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 20:59:10,382 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:01:45,681 INFO Start polling
+2026-01-29 21:01:46,454 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:01:53,175 INFO Update id=221629873 is handled. Duration 1041 ms by bot id=8573861065
+2026-01-29 21:01:56,262 INFO Update id=221629874 is handled. Duration 454 ms by bot id=8573861065
+2026-01-29 21:02:02,275 INFO Update id=221629875 is handled. Duration 177 ms by bot id=8573861065
+2026-01-29 21:02:04,607 INFO Update id=221629876 is handled. Duration 347 ms by bot id=8573861065
+2026-01-29 21:02:07,716 INFO Update id=221629877 is handled. Duration 123 ms by bot id=8573861065
+2026-01-29 21:02:15,889 INFO Polling stopped
+2026-01-29 21:02:15,890 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 21:02:15,890 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 21:02:16,146 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:03:19,134 INFO Start polling
+2026-01-29 21:03:19,903 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:03:24,091 INFO Update id=221629878 is handled. Duration 2146 ms by bot id=8573861065
+2026-01-29 21:03:28,214 INFO Update id=221629879 is handled. Duration 253 ms by bot id=8573861065
+2026-01-29 21:03:33,317 INFO Update id=221629880 is handled. Duration 617 ms by bot id=8573861065
+2026-01-29 21:03:34,780 INFO Update id=221629881 is handled. Duration 210 ms by bot id=8573861065
+2026-01-29 21:03:38,991 INFO Update id=221629882 is handled. Duration 194 ms by bot id=8573861065
+2026-01-29 21:08:28,290 INFO Polling stopped
+2026-01-29 21:08:28,291 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 21:08:28,291 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 21:08:28,555 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:11:14,157 INFO Start polling
+2026-01-29 21:11:15,071 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:11:23,838 INFO Update id=221629883 is handled. Duration 1158 ms by bot id=8573861065
+2026-01-29 21:11:59,737 INFO Update id=221629884 is handled. Duration 167 ms by bot id=8573861065
+2026-01-29 21:12:03,048 INFO Update id=221629885 is handled. Duration 185 ms by bot id=8573861065
+2026-01-29 21:12:06,699 INFO Update id=221629886 is handled. Duration 131 ms by bot id=8573861065
+2026-01-29 21:12:15,542 INFO Update id=221629887 is handled. Duration 238 ms by bot id=8573861065
+2026-01-29 21:12:20,953 INFO Update id=221629888 is handled. Duration 135 ms by bot id=8573861065
+2026-01-29 21:12:23,563 INFO Update id=221629889 is handled. Duration 229 ms by bot id=8573861065
+2026-01-29 21:12:31,006 INFO Update id=221629890 is handled. Duration 118 ms by bot id=8573861065
+2026-01-29 21:12:43,980 INFO Update id=221629891 is handled. Duration 615 ms by bot id=8573861065
+2026-01-29 21:12:47,825 INFO Update id=221629892 is handled. Duration 121 ms by bot id=8573861065
+2026-01-29 21:13:03,682 INFO Polling stopped
+2026-01-29 21:13:03,683 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 21:13:03,683 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 21:13:03,947 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:13:37,027 INFO Start polling
+2026-01-29 21:13:37,762 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:13:40,710 INFO Update id=221629893 is handled. Duration 1544 ms by bot id=8573861065
+2026-01-29 21:13:43,972 INFO Update id=221629894 is handled. Duration 202 ms by bot id=8573861065
+2026-01-29 21:13:50,087 INFO Update id=221629895 is handled. Duration 236 ms by bot id=8573861065
+2026-01-29 21:13:58,414 INFO Update id=221629896 is handled. Duration 348 ms by bot id=8573861065
+2026-01-29 21:14:31,030 INFO Polling stopped
+2026-01-29 21:14:31,031 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 21:14:31,031 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 21:14:31,289 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:14:41,819 INFO Start polling
+2026-01-29 21:14:44,037 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
+2026-01-29 21:14:46,551 INFO Update id=221629897 is handled. Duration 1646 ms by bot id=8573861065
+2026-01-29 21:14:50,441 INFO Update id=221629898 is handled. Duration 390 ms by bot id=8573861065
+2026-01-29 21:14:54,059 INFO Update id=221629899 is handled. Duration 197 ms by bot id=8573861065
+2026-01-29 21:14:57,101 INFO Update id=221629900 is handled. Duration 194 ms by bot id=8573861065
+2026-01-29 21:15:00,326 INFO Update id=221629901 is handled. Duration 373 ms by bot id=8573861065
+2026-01-29 21:15:04,478 INFO Update id=221629902 is handled. Duration 281 ms by bot id=8573861065
+2026-01-29 21:15:13,929 INFO Update id=221629903 is handled. Duration 195 ms by bot id=8573861065
+2026-01-29 21:15:22,286 INFO Update id=221629904 is handled. Duration 871 ms by bot id=8573861065
+2026-01-29 21:15:27,369 INFO Update id=221629905 is handled. Duration 192 ms by bot id=8573861065
+2026-01-29 21:15:30,682 INFO Update id=221629906 is handled. Duration 373 ms by bot id=8573861065
+2026-01-29 21:15:33,636 INFO Update id=221629907 is handled. Duration 242 ms by bot id=8573861065
+2026-01-29 21:39:44,070 INFO Update id=221629908 is handled. Duration 206 ms by bot id=8573861065
+2026-01-29 21:39:49,361 INFO Update id=221629909 is handled. Duration 511 ms by bot id=8573861065
+2026-01-29 21:39:53,898 INFO Update id=221629910 is not handled. Duration 8 ms by bot id=8573861065
+2026-01-29 21:39:53,898 ERROR Cause exception while process update id=221629910 by bot id=8573861065
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_recount_balances.py", line 19, in recount
+    events_text, errors_text, money_sum, hours_sum = recount_money()
+                                                     ~~~~~~~~~~~~~^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 156, in recount_money
+    service = connect_to_calendar()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 55, in connect_to_calendar
+    flow = InstalledAppFlow.from_client_secrets_file(
+        config_json["credentials"], url)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 199, in from_client_secrets_file
+    client_config = json.load(json_file)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-29 21:39:59,757 INFO Update id=221629911 is not handled. Duration 2 ms by bot id=8573861065
+2026-01-29 21:39:59,757 ERROR Cause exception while process update id=221629911 by bot id=8573861065
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_recount_balances.py", line 19, in recount
+    events_text, errors_text, money_sum, hours_sum = recount_money()
+                                                     ~~~~~~~~~~~~~^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 156, in recount_money
+    service = connect_to_calendar()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 55, in connect_to_calendar
+    flow = InstalledAppFlow.from_client_secrets_file(
+        config_json["credentials"], url)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 199, in from_client_secrets_file
+    client_config = json.load(json_file)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-29 21:40:04,164 INFO Update id=221629912 is handled. Duration 247 ms by bot id=8573861065
+2026-01-29 21:40:08,009 INFO Update id=221629913 is handled. Duration 793 ms by bot id=8573861065
+2026-01-29 21:40:13,713 INFO Update id=221629914 is handled. Duration 178 ms by bot id=8573861065
+2026-01-29 21:40:16,204 INFO Update id=221629915 is handled. Duration 556 ms by bot id=8573861065
+2026-01-29 21:40:19,859 INFO Update id=221629916 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 21:40:19,859 ERROR Cause exception while process update id=221629916 by bot id=8573861065
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_report_balances.py", line 24, in send_report
+    message_text = make_report()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\report_util.py", line 25, in make_report
+    service = connect_to_calendar()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 55, in connect_to_calendar
+    flow = InstalledAppFlow.from_client_secrets_file(
+        config_json["credentials"], url)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 199, in from_client_secrets_file
+    client_config = json.load(json_file)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-29 21:40:26,552 INFO Update id=221629917 is not handled. Duration 1 ms by bot id=8573861065
+2026-01-29 21:40:26,552 ERROR Cause exception while process update id=221629917 by bot id=8573861065
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 189, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\utils.py", line 13, in wrapper
+    return await handler(message, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\handlers\handlers_report_balances.py", line 24, in send_report
+    message_text = make_report()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\report_util.py", line 25, in make_report
+    service = connect_to_calendar()
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\utils\calendar_utils.py", line 55, in connect_to_calendar
+    flow = InstalledAppFlow.from_client_secrets_file(
+        config_json["credentials"], url)
+  File "C:\Users\Roman\PycharmProjects\accountant-bot\.venv\Lib\site-packages\google_auth_oauthlib\flow.py", line 199, in from_client_secrets_file
+    client_config = json.load(json_file)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 344, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Roman\AppData\Local\Programs\Python\Python313\Lib\json\decoder.py", line 362, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-01-29 21:41:34,220 INFO Polling stopped
+2026-01-29 21:41:34,220 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-01-29 21:41:34,220 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
+2026-01-29 21:41:34,482 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'

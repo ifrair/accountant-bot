@@ -1,10 +1,11 @@
-from aiogram import F, Router, types
+from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
 from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils.report_util import show_students_list
 
 
 class ChangeBalance(StatesGroup):
@@ -28,33 +29,34 @@ async def change_money(message: Message, state: FSMContext):
     await state.set_state(ChangeBalance.is_add)
     await state.update_data(is_add=(message.text == "Пополнить баланс"))
     await state.set_state(ChangeBalance.name)
-    message_text = 'Выбери одного:\n' + take_names(money_counts) + '\nВыбери и пришли одного из этих учеников'
-    sent_message = await message.answer(message_text,
+    message_text = 'Выбери одного:\n'
+    keyboard = show_students_list(money_counts)
+    await message.answer(message_text,
                          parse_mode="MARKDOWN",
-                         reply_markup=types.ReplyKeyboardRemove())
-    await state.update_data(list_message_id=sent_message.message_id)
+                         reply_markup=keyboard)
 
 
 # takes name of student
-@router.message(ChangeBalance.name)
-async def get_name(message: Message, state: FSMContext):
-    async with StateGuard(state) as guard:
-        money_counts = take_from_json("money_count")
-        if message.text not in money_counts:
-            await message.answer('Нет такого',
-                                 reply_markup=keyboards.main_keyboard)
-            return
-        guard.unlock()
-    await state.update_data(name=message.text)
-    await state.set_state(ChangeBalance.price)
-    message_data = await state.get_data()
-    await message.answer('Теперь пришли сколько ' + ('оплачено' if message_data['is_add'] else 'вычесть'))
-    list_message_id = message_data.get('list_message_id')
-    if list_message_id:
-        await message.bot.delete_message(
-            chat_id=message.chat.id,
-            message_id=list_message_id
-        )
+@router.callback_query(ChangeBalance.name)
+async def get_name(callback: CallbackQuery, state: FSMContext):
+    student_name = callback.data
+    if student_name == "cancel_operation":
+        await state.clear()
+        await callback.message.delete()
+        await callback.message.answer(text= "Отменено", eply_markup=keyboards.main_keyboard)
+    else:
+        async with StateGuard(state) as guard:
+            money_counts = take_from_json("money_count")
+            if student_name not in money_counts:
+                await callback.message.edit_text('Нет такого',
+                                     reply_markup=keyboards.main_keyboard)
+                return
+            guard.unlock()
+        await state.update_data(name=student_name)
+        await state.set_state(ChangeBalance.price)
+        await callback.message.delete()
+        message_data = await state.get_data()
+        await callback.message.answer('Теперь пришли сколько ' + ('оплачено' if message_data['is_add'] else 'вычесть'))
 
 
 # takes how much to increase

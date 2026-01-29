@@ -5,6 +5,7 @@ from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
 from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils.report_util import show_students_list
 
 
 class AddNewStudent(StatesGroup):
@@ -77,36 +78,35 @@ async def delete_student(message: Message, state: FSMContext):
         return
 
     await state.set_state(DeleteStudent.name)
-    message_text = 'Выбери и пришли одного:\n' + take_names(money_counts)
-    sent_message = await message.answer(message_text,
+    message_text = 'Выбери и пришли одного:\n'
+    keyboard = show_students_list(money_counts)
+    await message.answer(message_text,
                          parse_mode="MARKDOWN",
-                         reply_markup=types.ReplyKeyboardRemove())
-    await state.update_data(list_message_id1=sent_message.message_id)
+                         reply_markup=keyboard)
 
 
 # takes name of student to delete
-@router.message(DeleteStudent.name)
-async def delete_name(message: Message, state: FSMContext):
-    async with StateGuard(state) as guard:
-        money_counts = take_from_json("money_count")
-        if message.text not in money_counts:
-            await message.answer('Нет такого\nНачните заного - Удалить ученика',
-                                 reply_markup=keyboards.main_keyboard)
-            await state.clear()
-            return
-        guard.unlock()
+@router.callback_query(DeleteStudent.name)
+async def delete_name(callback: CallbackQuery, state: FSMContext):
+    delete_data = callback.data
+    if delete_data == "cancel_operation":
+        await state.clear()
+        await callback.message.delete()
+        await callback.message.answer(text= "Отменено", eply_markup=keyboards.main_keyboard)
+    else:
+        async with StateGuard(state) as guard:
+            money_counts = take_from_json("money_count")
+            if delete_data not in money_counts:
+                await callback.message.edit_text('Нет такого\nНачните заного - Удалить ученика',
+                                     reply_markup=keyboards.main_keyboard)
+                await state.clear()
+                return
+            guard.unlock()
 
-    await state.update_data(name=message.text)
-    await state.set_state(DeleteStudent.approving)
-    await message.answer(f'Удалить {message.text}?',
-                         reply_markup=keyboards.delete_student)
-    message_data = await state.get_data()
-    list_message_id = message_data.get('list_message_id1')
-    if list_message_id:
-        await message.bot.delete_message(
-            chat_id=message.chat.id,
-            message_id=list_message_id
-        )
+        await state.update_data(name=delete_data)
+        await state.set_state(DeleteStudent.approving)
+        await callback.message.answer(f'Удалить {delete_data}?',
+                             reply_markup=keyboards.delete_student)
 
 # if user sad that everything good on deleting
 @router.callback_query(F.data == 'approved deleting')
