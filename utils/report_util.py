@@ -95,7 +95,6 @@ def take_names(money):
 
 def show_students_list(students):
     keyboard = []
-
     for student in students:
         button = InlineKeyboardButton(text=student, callback_data=student)
         keyboard.append([button])

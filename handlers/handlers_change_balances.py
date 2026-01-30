@@ -45,13 +45,6 @@ async def get_name(callback: CallbackQuery, state: FSMContext):
         await callback.message.delete()
         await callback.message.answer(text= "Отменено", eply_markup=keyboards.main_keyboard)
     else:
-        async with StateGuard(state) as guard:
-            money_counts = take_from_json("money_count")
-            if student_name not in money_counts:
-                await callback.message.edit_text('Нет такого',
-                                     reply_markup=keyboards.main_keyboard)
-                return
-            guard.unlock()
         await state.update_data(name=student_name)
         await state.set_state(ChangeBalance.price)
         await callback.message.delete()
