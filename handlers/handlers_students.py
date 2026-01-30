@@ -94,15 +94,6 @@ async def delete_name(callback: CallbackQuery, state: FSMContext):
         await callback.message.delete()
         await callback.message.answer(text= "Отменено", eply_markup=keyboards.main_keyboard)
     else:
-        async with StateGuard(state) as guard:
-            money_counts = take_from_json("money_count")
-            if delete_data not in money_counts:
-                await callback.message.edit_text('Нет такого\nНачните заного - Удалить ученика',
-                                     reply_markup=keyboards.main_keyboard)
-                await state.clear()
-                return
-            guard.unlock()
-
         await state.update_data(name=delete_data)
         await state.set_state(DeleteStudent.approving)
         await callback.message.answer(f'Удалить {delete_data}?',
