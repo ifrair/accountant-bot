@@ -1,8 +1,0 @@
-2026-02-02 18:46:30,480 INFO Start polling
-2026-02-02 18:46:31,239 INFO Run polling for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
-2026-02-02 18:46:35,787 INFO Update id=221629959 is handled. Duration 978 ms by bot id=8573861065
-2026-02-02 18:46:45,217 INFO Update id=221629960 is handled. Duration 229 ms by bot id=8573861065
-2026-02-02 18:46:49,302 INFO Polling stopped
-2026-02-02 18:46:49,303 ERROR Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
-2026-02-02 18:46:49,303 WARNING Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8573861065)
-2026-02-02 18:46:49,568 INFO Polling stopped for bot @Calendar_students_bot id=8573861065 - 'Calendar-bot'
