@@ -96,6 +96,7 @@ async def delete_name(callback: CallbackQuery, state: FSMContext):
     else:
         await state.update_data(name=delete_data)
         await state.set_state(DeleteStudent.approving)
+        await callback.message.delete()
         await callback.message.answer(f'Удалить {delete_data}?',
                              reply_markup=keyboards.delete_student)
 
@@ -110,7 +111,7 @@ async def approving_deleting(callback: CallbackQuery, state: FSMContext):
     push_to_json("money_count", money_counts)
 
     await callback.message.delete()
-    await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
+    await callback.message.answer(text=f'Успешно удален {message_data["name"]}', reply_markup=keyboards.main_keyboard)
 
 
 # if canceled

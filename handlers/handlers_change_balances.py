@@ -78,7 +78,9 @@ async def approving_changes(callback: CallbackQuery, state: FSMContext):
     push_to_json("money_count", money_counts)
 
     await callback.message.delete()
-    await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
+    await callback.message.answer(text='Успешно!' + (' Оплачено' if message_data["is_add"] else ' Вычтено') +
+                                       f' {message_data["name"]} на сумму {message_data["price"]}',
+                                  reply_markup=keyboards.main_keyboard)
 
 
 # if something went wrong on increasing or decreasing balance
