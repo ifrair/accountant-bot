@@ -44,22 +44,29 @@ def last_date_update(date_now):
 
 # gets services of Google calendar
 def connect_to_calendar():
-    url = ['https://www.googleapis.com/auth/calendar.readonly']
+    scopes = ['https://www.googleapis.com/auth/calendar.readonly']
+    config = take_from_json("config")
 
-    config_json = take_from_json("config")
+    # Загружаем токены если есть
     creds = None
-    if os.path.exists(config_json["google_token"]):
+    if os.path.exists(config["google_token"]):
         creds = Credentials.from_authorized_user_file(
-            config_json["google_token"], url)
+            config["google_token"], scopes)
+
+    # Обновляем или получаем новые токены
     if not creds or not creds.valid:
-        flow = InstalledAppFlow.from_client_secrets_file(
-            config_json["credentials"], url)
-        creds = flow.run_local_server(
-            port=0, access_type='offline', prompt='consent')
-        creds_to_json = creds.to_json()
-        push_to_json("google_token", creds_to_json, True)
-    service = build('calendar', 'v3', credentials=creds)
-    return service
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(GoogleRequest())
+        else:
+            creds = InstalledAppFlow.from_client_secrets_file(
+                config["credentials"], scopes
+            ).run_local_server(port=0)
+
+        # Сохраняем
+        with open(config["google_token"], 'w') as f:
+            f.write(creds.to_json())
+
+    return build('calendar', 'v3', credentials=creds)
 
 
 # processes the event and return errors (if they exist)
