@@ -4,8 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
-from utils.report_util import show_students_list
+from utils import check_access, is_int, push_to_json, take_from_json
 
 
 class AddNewStudent(StatesGroup):
@@ -79,7 +78,7 @@ async def delete_student(message: Message, state: FSMContext):
 
     await state.set_state(DeleteStudent.name)
     message_text = 'Выбери и пришли одного:\n'
-    keyboard = show_students_list(money_counts)
+    keyboard = keyboards.show_students_list(money_counts)
     await message.answer(message_text,
                          parse_mode="MARKDOWN",
                          reply_markup=keyboard)

@@ -4,8 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
-from utils.report_util import show_students_list
+from utils import check_access, is_int, push_to_json, take_from_json
 
 
 class ChangeBalance(StatesGroup):
@@ -30,7 +29,7 @@ async def change_money(message: Message, state: FSMContext):
     await state.update_data(is_add=(message.text == "Пополнить баланс"))
     await state.set_state(ChangeBalance.name)
     message_text = 'Выбери одного:\n'
-    keyboard = show_students_list(money_counts)
+    keyboard = keyboards.show_students_list(money_counts)
     await message.answer(message_text,
                          parse_mode="MARKDOWN",
                          reply_markup=keyboard)
