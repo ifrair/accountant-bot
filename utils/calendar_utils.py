@@ -86,7 +86,8 @@ def processing_event(event, need_push_json=True):
     description_list = list(description.split())
 
     if ("урок" in summary_list) or ("Урок" in summary_list):
-        people = [(summary_list[0], description_list[0])]
+        name = next((word for word in summary_list if word.lower() != 'урок'), None)
+        people = [(name, description_list[0])]
     elif ("Группа" in summary_list) or ("группа" in summary_list):
         people = [(description_list[i], description_list[i+1]) for i in range(0, len(description_list) - 1, 2)]
     else:
