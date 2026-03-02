@@ -1,6 +1,7 @@
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from collections import OrderedDict
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from .calendar_utils import connect_to_calendar, get_from_to_now_datetime, get_events_by_time, processing_event
 from .utils import take_from_json
 

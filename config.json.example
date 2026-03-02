@@ -11,4 +11,4 @@
     "money_counts_backup": "data/balances_backup.json",
     "logs": "data/logs.txt",
     "start_time": {"year": 2024, "month": 12, "day": 1, "hour": 0, "minute": 0, "second": 0}
-  }
+    }

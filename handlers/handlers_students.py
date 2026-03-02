@@ -4,7 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 import keyboard as keyboards
-from utils import check_access, is_int, push_to_json, take_from_json, take_names, StateGuard
+from utils import check_access, is_int, push_to_json, take_from_json
 
 
 class AddNewStudent(StatesGroup):
@@ -77,29 +77,27 @@ async def delete_student(message: Message, state: FSMContext):
         return
 
     await state.set_state(DeleteStudent.name)
-    message_text = 'Выбери и пришли одного:\n' + take_names(money_counts)
+    message_text = 'Выбери и пришли одного:\n'
+    keyboard = keyboards.show_students_list(money_counts)
     await message.answer(message_text,
                          parse_mode="MARKDOWN",
-                         reply_markup=types.ReplyKeyboardRemove())
+                         reply_markup=keyboard)
 
 
 # takes name of student to delete
-@router.message(DeleteStudent.name)
-async def delete_name(message: Message, state: FSMContext):
-    async with StateGuard(state) as guard:
-        money_counts = take_from_json("money_count")
-        if message.text not in money_counts:
-            await message.answer('Нет такого\nНачните заного - Удалить ученика',
-                                 reply_markup=keyboards.main_keyboard)
-            await state.clear()
-            return
-        guard.unlock()
-
-    await state.update_data(name=message.text)
-    await state.set_state(DeleteStudent.approving)
-    await message.answer(f'Удалить {message.text}?',
-                         reply_markup=keyboards.delete_student)
-
+@router.callback_query(DeleteStudent.name)
+async def delete_name(callback: CallbackQuery, state: FSMContext):
+    delete_data = callback.data
+    if delete_data == "cancel_operation":
+        await state.clear()
+        await callback.message.delete()
+        await callback.message.answer(text= "Отменено", eply_markup=keyboards.main_keyboard)
+    else:
+        await state.update_data(name=delete_data)
+        await state.set_state(DeleteStudent.approving)
+        await callback.message.delete()
+        await callback.message.answer(f'Удалить {delete_data}?',
+                             reply_markup=keyboards.delete_student)
 
 # if user sad that everything good on deleting
 @router.callback_query(F.data == 'approved deleting')
@@ -112,7 +110,7 @@ async def approving_deleting(callback: CallbackQuery, state: FSMContext):
     push_to_json("money_count", money_counts)
 
     await callback.message.delete()
-    await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)
+    await callback.message.answer(text=f'Успешно удален {message_data["name"]}', reply_markup=keyboards.main_keyboard)
 
 
 # if canceled
