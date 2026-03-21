@@ -61,7 +61,8 @@ async def approving_adding(callback: CallbackQuery, state: FSMContext):
 
     money_counts = take_from_json("money_count")
     money_counts[message_data["name"]] = message_data["price"]
-    push_to_json("money_count", money_counts)
+    sorted_money_counts = dict(sorted(money_counts.items()))
+    push_to_json("money_count", sorted_money_counts)
 
     await callback.message.delete()
     await callback.message.answer(text='Успешно!', reply_markup=keyboards.main_keyboard)

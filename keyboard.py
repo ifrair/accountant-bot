@@ -24,11 +24,10 @@ delete_student = InlineKeyboardMarkup(inline_keyboard=[
 ])
 
 def show_students_list(students):
-    keyboard = []
-    for student in students:
-        button = InlineKeyboardButton(text=student, callback_data=student)
-        keyboard.append([button])
-    keyboard.append([InlineKeyboardButton(text=f"Отмена", callback_data="cancel_operation")])
+    keyboard = InlineKeyboardMarkup(row_width=2)
 
-    reply_markup = InlineKeyboardMarkup(inline_keyboard=keyboard)
-    return reply_markup
+    for student in students:
+        keyboard.add(InlineKeyboardButton(text=student, callback_data=student))
+    keyboard.row(InlineKeyboardButton(text=f"❌ Отмена", callback_data="cancel_operation"))
+
+    return keyboard
