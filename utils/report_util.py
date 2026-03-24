@@ -1,7 +1,5 @@
 from datetime import datetime
-from zoneinfo import ZoneInfo
 from collections import OrderedDict
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from .calendar_utils import connect_to_calendar, get_from_to_now_datetime, get_events_by_time, processing_event
 from .utils import take_from_json
 
@@ -82,8 +80,8 @@ def make_report():
 def take_balances(money):
     message_text = ''
     for name in sorted(money):
-        message_text += (('Долг' if money[name] < 0 else 'Остаток') +
-                         f' {name} равен: {money[name]} руб\n')
+        reaction = ('❌' if money[name] < 0 else ('☑️' if money[name] == 0 else '✅'))
+        message_text += (reaction + f' {name} равен: {money[name]} руб\n')
     return message_text
 
 

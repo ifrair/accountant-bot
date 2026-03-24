@@ -1,6 +1,5 @@
 import logging
 import os
-from google.auth.transport.requests import Request as GoogleRequest
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
@@ -151,12 +150,19 @@ def get_events_by_time(service, from_time, to_time):
 # recounting from last time
 def recount_money():
     # recounts time moments to request
-    from_date, to_date, date_now = get_from_to_now_datetime(take_from_json("last_time"))
+    last_time = take_from_json("last_time")
+    from_date, to_date, date_now = get_from_to_now_datetime(last_time)
 
     service = connect_to_calendar()
     events = get_events_by_time(service, from_date, to_date)
     if not events:
         logging.info('Нет предстоящих событий.\n\n')
+
+    # updating backups
+    money_counts = take_from_json("money_count")
+    push_to_json("money_counts_backup", money_counts)
+    push_to_json("last_time_backup", last_time)
+
     last_date_update(date_now)
 
     events_text = ''

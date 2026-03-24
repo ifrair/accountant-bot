@@ -1,21 +1,21 @@
 import asyncio
-from aiogram import Dispatcher, Bot
-from handlers import handlers
+from maxapi import Dispatcher, Bot
+from maxapi.context import MemoryContext
+from handlers import routers
 from utils import take_from_json
 
 import logging
 
 config = take_from_json("config")
-Token = config["Token"]
+token = config["token"]
 
-dp = Dispatcher()
-bot = Bot(token=Token)
+dp = Dispatcher(storage=MemoryContext)
+bot = Bot(token=token)
 
 
 async def main():
-    for handler in handlers:
-        dp.include_router(handler)
-    await dp.start_polling(bot)
+    dp.include_routers(*routers)
+    await dp.start_polling(bot, skip_updates=True)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, filename=config["logs"], filemode="a",
