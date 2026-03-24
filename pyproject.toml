@@ -1,0 +1,40 @@
+[tool.ruff]
+# Основные настройки
+line-length = 120
+unsafe-fixes = true
+
+# Исключаемые папки/файлы
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+# Включаемые правила
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (неиспользуемые импорты/переменные)
+    "I",   # isort (сортировка импортов)
+    "UP",  # pyupgrade (современный синтаксис)
+    "B",   # flake8-bugbear (потенциальные баги)
+    "C4",  # flake8-comprehensions (улучшенные генераторы)
+    "SIM", # flake8-simplify (упрощение кода)
+    "RET", # flake8-return (анализ возвращаемых значений)
+    "ARG", # flake8-unused-arguments (неиспользуемые аргументы)
+    "PTH", # use-pathlib (использовать pathlib вместо os.path)
+]
+
+# Игнорируемые правила
+ignore = [
+    # "E501", # длинные строки
+]
+
+[tool.ruff.format]
+# Настройки форматирования
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

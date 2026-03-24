@@ -4,19 +4,19 @@ from maxapi.utils.inline_keyboard import InlineKeyboardBuilder
 main_keyboard_builder = InlineKeyboardBuilder()
 main_keyboard_builder.row(
     CallbackButton(text="Показать балансы", payload="show_balances"),
-    CallbackButton(text="Сделать отчет", payload="make_report")
+    CallbackButton(text="Сделать отчет", payload="make_report"),
 )
 main_keyboard_builder.row(
     CallbackButton(text="Пополнить баланс", payload="add_balance"),
-    CallbackButton(text="Вычесть баланс", payload="subtract_balance")
+    CallbackButton(text="Вычесть баланс", payload="subtract_balance"),
 )
 main_keyboard_builder.row(
     CallbackButton(text="Добавить ученика", payload="add_student"),
-    CallbackButton(text="Удалить ученика", payload="delete_student")
+    CallbackButton(text="Удалить ученика", payload="delete_student"),
 )
 main_keyboard_builder.row(
     CallbackButton(text="Пересчитать балансы", payload="recalculate_balances"),
-    CallbackButton(text="Откатить последний пересчет", payload="rollback_recalculation")
+    CallbackButton(text="Откатить последний пересчет", payload="rollback_recalculation"),
 )
 main_keyboard = main_keyboard_builder.as_markup()
 
@@ -34,6 +34,7 @@ delete_student_builder = InlineKeyboardBuilder()
 delete_student_builder.row(CallbackButton(text="Заново давай", payload="wrong_deleting"))
 delete_student_builder.row(CallbackButton(text="Да", payload="approved_deleting"))
 delete_student = delete_student_builder.as_markup()
+
 
 def get_students_keyboard(students):
     builder = InlineKeyboardBuilder()

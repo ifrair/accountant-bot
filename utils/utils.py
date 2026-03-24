@@ -1,6 +1,8 @@
-from functools import wraps
-from .json_utils import take_from_json
 import logging
+from functools import wraps
+
+from .json_utils import take_from_json
+
 
 def check_access(handler):
     @wraps(handler)
@@ -11,13 +13,14 @@ def check_access(handler):
         else:
             logging.info(f"Type of query {type(event)} is unsupportable")
             await event.message.answer("Недопустимый тип запроса")
-            return
+            return None
 
         if user_id not in config_json["users"]:
             logging.info(f"User {event.message.sender.user_id} has no access")
             await event.message.answer("Нет доступа")
-            return
+            return None
         return await handler(event, *args, **kwargs)
+
     return wrapper
 
 
